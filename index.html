@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA Crime Tracker</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-text">
+        <h1>LA Crime Tracker</h1>
+        <p>Reported crimes in Los Angeles, 2020–2024, from the City of LA Open Data API</p>
+      </div>
+
+      <form class="controls" id="controls">
+        <label>
+          LAPD Area
+          <select id="area-select">
+            <option value="">All areas</option>
+            <option>77th Street</option>
+            <option>Central</option>
+            <option>Devonshire</option>
+            <option>Foothill</option>
+            <option>Harbor</option>
+            <option>Hollenbeck</option>
+            <option>Hollywood</option>
+            <option>Mission</option>
+            <option>N Hollywood</option>
+            <option>Newton</option>
+            <option>Northeast</option>
+            <option>Olympic</option>
+            <option>Pacific</option>
+            <option>Rampart</option>
+            <option>Southeast</option>
+            <option>Southwest</option>
+            <option>Topanga</option>
+            <option>Van Nuys</option>
+            <option>West LA</option>
+            <option>West Valley</option>
+            <option>Wilshire</option>
+          </select>
+        </label>
+
+        <label>
+          Show
+          <select id="count-select">
+            <option value="12">12 records</option>
+            <option value="24" selected>24 records</option>
+            <option value="48">48 records</option>
+          </select>
+        </label>
+
+        <button type="submit">Load crimes</button>
+      </form>
+    </header>
+
+    <main>
+      <p class="status" id="status">Loading crime data...</p>
+      <section class="crime-list" id="crime-list"></section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Data: <a href="https://data.lacity.org/d/2nrs-mtv8" target="_blank">Crime Data from 2020 to Present</a> (City of Los Angeles). Animation: Popmotion spring. Click a card to make it bounce.</p>
+    </footer>
+
+    <!-- Popmotion 8 must load before script.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popmotion/8.7.3/popmotion.global.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
